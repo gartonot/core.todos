@@ -12,4 +12,8 @@ class Todo extends Model
     protected $fillable = ['id', 'title', 'isCompleted', 'created_at'];
 
     protected $hidden = ['updated_at', 'deleted_at'];
+
+    protected $casts = [
+        'isCompleted' => 'boolean'
+    ];
 }
